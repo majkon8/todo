@@ -7,7 +7,6 @@ try {
     if ($connection->connect_errno != 0) {
         throw new Exception("Connection to database error.");
     }
-    return $connection;
 } catch (Exception $error) {
     echo $error->getMessage();
     exit();
