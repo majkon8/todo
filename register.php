@@ -52,7 +52,7 @@ function register()
                             $get_user_id_query->execute();
                             $query_result = $get_user_id_query->get_result();
                             if ($query_result->num_rows == 0) {
-                                throw new Exception('Database query error. Try again later.');
+                                throw new Exception('Database query result error. Try again later.');
                             }
                             $query_data = $query_result->fetch_assoc();
                             $user_id = $query_data['id'];
@@ -62,18 +62,18 @@ function register()
                                 $insert_tasks_query->bind_param('is', $user_id, $tasks);
                                 $insert_tasks_query->execute();
                             } else {
-                                throw new Exception('Database query error. Try again later.');
+                                throw new Exception('Database tasks query error. Try again later.');
                             }
                         } else {
-                            throw new Exception('Database query error. Try again later.');
+                            throw new Exception('Database user query error. Try again later.');
                         }
                         $_SESSION['register_done'] = "You can sign in to your account";
                     } else {
-                        throw new Exception('Database query error. Try again later.');
+                        throw new Exception('Database register query error. Try again later.');
                     }
                 }
             } else {
-                throw new Exception('Database query error. Try again later.');
+                throw new Exception('Email address already taken');
             }
             $connection->close();
         } catch (Exception $error) {
