@@ -73,7 +73,7 @@ function register()
                     }
                 }
             } else {
-                throw new Exception('Email address already taken');
+                throw new Exception('Database email query error. Try again later.');
             }
             $connection->close();
         } catch (Exception $error) {
