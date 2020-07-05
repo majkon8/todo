@@ -38,7 +38,7 @@ function reset_password()
                         $token_query->execute();
                         $ADMIN_NAME = "ToDo";
                         $ADMIN_EMAIL = "majkonserver@gmail.com";
-                        $url = "http://localhost/todo/reset-password.php?token={$token}";
+                        $url = "https://git.heroku.com/powerful-journey-43314.git/reset-password.php?token={$token}";
                         $to = $email;
                         $subject = 'Your password reset link';
                         $message = '<p>We recieved a password reset request. The link to reset your password is below. ';

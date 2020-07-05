@@ -347,7 +347,7 @@ function changeDateFormat(date) {
 }
 
 function postTasks() {
-  const url = "http://localhost/todo/save.php";
+  const url = "/todo/save.php";
   const formData = new FormData();
   formData.append("tasks", JSON.stringify(tasks));
   formData.append("authToken", authToken);
