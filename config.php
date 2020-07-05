@@ -9,6 +9,6 @@ $db = substr($url["path"], 1);
 return [
 	'host' => $server,
 	'user' => $username,
-	'password' => 'mikol',
+	'password' => $password,
 	'database' => $db
 ];
