@@ -73,7 +73,6 @@ function register()
                     }
                 }
             } else {
-                echo $connection;
                 echo $get_email_query;
                 throw new Exception('Database email query error. Try again later.');
             }
